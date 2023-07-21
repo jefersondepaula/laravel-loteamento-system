@@ -19,4 +19,8 @@ class Empreendimentos extends Model
         return $this->hasMany(Quadras::class);
     }
 
+    public function lotes() {
+        return $this->hasMany(Lotes::class);
+    }
+
 }

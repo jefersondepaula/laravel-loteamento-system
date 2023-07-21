@@ -51,7 +51,6 @@ class EmpreendimentoController extends Controller
             $quadra->lotes = Lotes::where('quadra_id', $quadra->id)->get();
         }
 
-        //dd($quadras);
         return view('empreendimento', ['name'=>$empreeendimento->name, 'empreendimento_id'=>$empreeendimento->id, 'quadras'=>$quadras]);
     }
     public function dashboard(){

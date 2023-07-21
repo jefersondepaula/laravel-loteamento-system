@@ -5,63 +5,67 @@
         </h2>
     </x-slot>
 
-    <div class="dash-nav shadow" style="left:0; background-color:#fff;">
-        <div class="menu-items" style="padding:20px">
-            <ul class="flex">
-                <li class="mr-2">
-                    <a href="/dashboard/register"><i class="fas fa-user-plus"></i> Cadastrar Pessoa |</a>
-                </li class="mr-2">
-                <li>
-                   <a href="/dashboard/empreendimentos"> <i class="fas fa-home"></i> Empreendimentos |</a>
-                </li>
-            </ul>
-            </ul>
-        </div>
-    </div>
-
-    <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="px-6 mt-4 mb-4 text-gray-900 dark:text-gray-100">
-                    <h2><i class="fas fa-info-circle"></i> Legenda</h2>
-                </div>
-                <div class="flex flex-wrap w-full py-2 px-4">
-                    <div class="flex-1 py-2 text-center text-gray-900 border disponivel">
-                        Lote disponível
-                    </div>
-                    <div class="flex-1 py-2 text-center text-gray-900 border solicitada">
-                        Reserva solicitada
-                    </div>
-                    <div class="flex-1 py-2 text-center text-gray-900 border reservado">
-                        Lote reservado
-                    </div>
-                    <div class="flex-1 py-2 text-center text-gray-900 border vendido">
-                        Lote vendido
-                    </div>
-                    <div class="flex-1 py-2 text-center text-gray-900 border indisponivel">
-                        Lote indisponível
-                    </div>
+    <div class="body-dash flex">
+        <div class="left-side">
+            <div class="dash-nav shadow bg-slate-500 inline-block w-52 h-screen">
+                <div class="menu-items">
+                    <ul class="flex flex-col p-4">
+                        <li class="mr-2 mb-2 text-white">
+                            <a href="/dashboard/register"><i class="fas fa-user-plus"></i> Cadastrar Pessoa</a>
+                        </li>
+                        <li class="mr-2 mb-2 text-white">
+                           <a href="/dashboard/empreendimentos"> <i class="fas fa-home"></i> Empreendimentos</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="right-side w-full">
+            <div class="py-6">
+                <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                    <div class="bg-slate-300 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                        <div class="px-6 mt-4 mb-4 text-gray-900 dark:text-gray-100">
+                            <h2><i class="fas fa-info-circle"></i> Legenda</h2>
+                        </div>
+                        <div class="flex flex-wrap w-full py-2 px-4">
+                            <div class="flex-1 py-2 text-center border disponivel">
+                                Lote disponível
+                            </div>
+                            <div class="flex-1 py-2 text-center border solicitada">
+                                Reserva solicitada
+                            </div>
+                            <div class="flex-1 py-2 text-center border reservado">
+                                Lote reservado
+                            </div>
+                            <div class="flex-1 py-2 text-center border vendido">
+                                Lote vendido
+                            </div>
+                            <div class="flex-1 py-2 text-center border indisponivel">
+                                Lote indisponível
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="mt-1">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h2><i class="fas fa-building"></i> Todos os empreendimentos</h2>
-                    <div class="flex mr-2 mt-4">
-                        @if (!empty($empreendimentos))
-                            @foreach ($empreendimentos as $empreendimento)
-                                <div class="mr-2 border shadow p-2">
-                                    <div class="empreendimento-box bg-gray">
-                                        <h1>Nome do empreendimento: {{$empreendimento->name}}</h1>
-                                        <p>Quantas quadras: {{$empreendimento->quadras}}</p>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endif
+            <div class="mt-1">
+                <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                    <div class="bg-slate-300 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                        <div class="p-6 text-blue-950 dark:text-gray-100 ">
+                            <h2><i class="fas fa-building"></i> Todos os empreendimentos</h2>
+                            <div class="flex mr-2 mt-4">
+                                @if (!empty($empreendimentos))
+                                    @foreach ($empreendimentos as $empreendimento)
+                                        <div class="mr-2 border border-gray-400 shadow p-2 rounded-lg bg-slate-500">
+                                            <div class="empreendimento-box text-white">
+                                                <h1>Nome do empreendimento: {{$empreendimento->name}}</h1>
+                                                <p>Quantas quadras: {{$empreendimento->quadras}}</p>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

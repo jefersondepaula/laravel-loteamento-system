@@ -15,7 +15,7 @@ class Lotes extends Model
         'status','vendedor','comprador','status_date','quadra_id','empreendimento_id'
     ];
 
-    public function qadras(){
+    public function quadras(){
         return $this->belongsTo(Quadras::class);
     }
 }
