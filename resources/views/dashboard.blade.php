@@ -1,9 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            <i class="fas fa-chart-line"></i> {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+{{--    <x-slot name="header">--}}
+{{--        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">--}}
+{{--            <i class="fas fa-chart-line"></i> {{ __('Dashboard') }}--}}
+{{--        </h2>--}}
+{{--    </x-slot>--}}
 
     <div class="body-dash flex">
         <div class="left-side">
