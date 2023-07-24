@@ -24,9 +24,9 @@
             <div class="py-6">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="flex justify-between strong">
-                        <h1>Empreendimentos</h1>
-                        <h3><a href="/dashboard/empreendimentos/cadastrar" class="text-gray-500 dark:text-gray-400 hover:text-slate-800 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
-                            <i class="fas fa-arrow-right"></i> Cadastrar empreendimentos
+                        <h1 class="text-sky-700 font-bold">Empreendimentos</h1>
+                        <h3 class="font-bold hover:animate-bounce hover:underline"><a href="/dashboard/empreendimentos/cadastrar" class="text-sky-700 dark:text-gray-400 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                            <i class="fas fa-arrow-right text-sky-700 font-bold"></i> Cadastrar empreendimentos
                         </a></h3>
                     </div>
 
