@@ -22,11 +22,12 @@
         </div>
         <div class="right-side w-full">
             <div class="py-6">
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="max-w-full mx-auto sm:px-6 lg:px-8">
                     <div class="flex justify-between strong">
                         <h1 class="text-sky-700 font-bold">Empreendimentos</h1>
-                        <h3 class="font-bold hover:animate-bounce hover:underline"><a href="/dashboard/empreendimentos/cadastrar" class="text-sky-700 dark:text-gray-400 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
-                            <i class="fas fa-arrow-right text-sky-700 font-bold"></i> Cadastrar empreendimentos
+                        <h3 class="font-bold hover:animate-bounce hover:underline bg-emerald-700 py-2 px-4 rounded-md">
+                            <a href="/dashboard/empreendimentos/cadastrar" class="text-white dark:text-gray-400 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                            <i class="fas fa-arrow-right text-white font-bold"></i> Cadastrar empreendimentos
                         </a></h3>
                     </div>
 
@@ -36,10 +37,10 @@
                             @if (!empty($empreendimentos))
                                 @foreach ($empreendimentos as $empreendimento)
                                     <a href="/dashboard/empreendimento/{{$empreendimento->id}}">
-                                        <div class="mr-2 border shadow p-2  border-gray-400 shadow p-2 rounded-lg bg-slate-500">
+                                        <div class="mr-2 border border-l-8 border-l-emerald-700 border-gray-400 shadow p-4 rounded-lg bg-slate-200">
                                             <div class="empreendimento-box bg-gray text-white">
-                                                <h1 class="">Nome do empreendimento: <span class="font-medium">{{$empreendimento->name}}</span></h1>
-                                                <p>Qtd de quadras: <span class="font-medium">{{$empreendimento->quadras}}</span></p>
+                                                <h1 class="text-black">Nome do empreendimento: <span class="text-emerald-900 font-bold">{{$empreendimento->name}}</span></h1>
+                                                <p class="text-black">Quantas quadras: <span class="text-emerald-900 font-bold">{{$empreendimento->quadras}} </span></p>
                                             </div>
                                         </div>
                                     </a>
